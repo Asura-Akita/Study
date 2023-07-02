@@ -101,9 +101,8 @@ def collBack(alfa, Long, coefObj, duration):
     peleng = int(b[np.argmax(Wpt)]) # пеленг
 
     showSignal.viewSetResponse(Wp, tAnt, indMax, indMin)
-    showSignal.viewGridCoordinates(distance, peleng)
-
     classGoals = ClassGoals().getClassName(tAnt, indMin, Wpt, koefHelPClassObj)
+    showSignal.viewGridCoordinates(distance, peleng, classGoals)
 
     return DataWorkAlgoritm(distance, peleng, classGoals)
 
